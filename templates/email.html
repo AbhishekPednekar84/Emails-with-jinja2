@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        {% for headline, url_img in final_content.items() %}
+            <div class="card bg-dark">
+                <div class="card-header">
+                    <img src="{{ url_img[1] }}" align="middle">
+                </div>
+                <div class="card-body">
+                    <a style="color:white" href="{{ url_img[0] }}">{{ headline }}</a>
+                </div>
+
+            </div>
+
+            <br>
+        {% endfor %}
+    </div>
+{% endblock content %}
